@@ -18,23 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  
   <PropertyGroup>
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CLRSupport>false</CLRSupport>
   </PropertyGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <Import Project="$(WpfCppProps)" />
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />  
-
-<PropertyGroup Label="Globals">
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{19f853cb-c936-40be-8f9d-e6bed3cf8a3d}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <TargetName>common</TargetName>
   </PropertyGroup>
-
   <ItemDefinitionGroup>
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -42,14 +38,12 @@
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MsBuildThisFileDirectory)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
-  
   <ItemGroup>
     <ClCompile Include="precomp.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>precomp.hpp</PrecompiledHeaderFile>
     </ClCompile>
   </ItemGroup>
-
   <ItemGroup>
     <ClCompile Include="AssertDllInUse.cpp" />
     <ClCompile Include="BaseMatrix.cpp" />
@@ -91,9 +85,67 @@
     <ClCompile Include="exports.cpp" />
     <ClCompile Include="dwritefactory.cpp" />
     <ClCompile Include="renderoptions.cpp" />
-    <ClCompile Include="$(WpfSharedDir)cpp\dwriteloader.cpp" >
+    <ClCompile Include="$(WpfSharedDir)cpp\dwriteloader.cpp">
       <PreCompiledHeader>NotUsing</PreCompiledHeader>
     </ClCompile>
   </ItemGroup>
-  
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />  </Project>
+  <ItemGroup>
+    <ClInclude Include="3dutils.h" />
+    <ClInclude Include="AliasedClip.h" />
+    <ClInclude Include="AssertDllInUse.h" />
+    <ClInclude Include="BaseMatrix.h" />
+    <ClInclude Include="basetypes.h" />
+    <ClInclude Include="BufferDispenser.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="CoordinateSpace.h" />
+    <ClInclude Include="D3DLoader.h" />
+    <ClInclude Include="d3dutils.h" />
+    <ClInclude Include="delayloadedmodule.h" />
+    <ClInclude Include="DelayLoadedProc.h" />
+    <ClInclude Include="Display.h" />
+    <ClInclude Include="Dump.h" />
+    <ClInclude Include="dwminterop.h" />
+    <ClInclude Include="dwritefactory.h" />
+    <ClInclude Include="engine.h" />
+    <ClInclude Include="EnhancedContrastTable.h" />
+    <ClInclude Include="fix.h" />
+    <ClInclude Include="Gamma.h" />
+    <ClInclude Include="GradientTexture.h" />
+    <ClInclude Include="guidelinecollection.h" />
+    <ClInclude Include="intermediatertcreator.h" />
+    <ClInclude Include="InternalRT.h" />
+    <ClInclude Include="lazymem.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="matrix.h" />
+    <ClInclude Include="matrix3x2.h" />
+    <ClInclude Include="MatrixBuilder.h" />
+    <ClInclude Include="MatrixStack.h" />
+    <ClInclude Include="memblock.h" />
+    <ClInclude Include="memblockreader.h" />
+    <ClInclude Include="memreader.h" />
+    <ClInclude Include="memwriter.h" />
+    <ClInclude Include="milboxf.h" />
+    <ClInclude Include="milcoredllentry.h" />
+    <ClInclude Include="MILDC.h" />
+    <ClInclude Include="MILMatrix.h" />
+    <ClInclude Include="MultiOutSpaceMatrix.h" />
+    <ClInclude Include="OSCompat.h" />
+    <ClInclude Include="precomp.hpp" />
+    <ClInclude Include="ptrarray.h" />
+    <ClInclude Include="ptrset.h" />
+    <ClInclude Include="Rect.h" />
+    <ClInclude Include="RectUtils.h" />
+    <ClInclude Include="RenderingConstants.h" />
+    <ClInclude Include="renderoptions.h" />
+    <ClInclude Include="ResourcePool.h" />
+    <ClInclude Include="rtutils.h" />
+    <ClInclude Include="slistutil.h" />
+    <ClInclude Include="SortAlgorithms.h" />
+    <ClInclude Include="stackalign.h" />
+    <ClInclude Include="Tier.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="WatermarkStack.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

@@ -18,23 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  
   <PropertyGroup>
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CLRSupport>false</CLRSupport>
   </PropertyGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <Import Project="$(WpfCppProps)" />
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />  
-
-<PropertyGroup Label="Globals">
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{73f780df-9216-4691-bb7e-1518878098db}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <TargetName>shared</TargetName>
   </PropertyGroup>
-
   <ItemDefinitionGroup>
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -42,14 +38,12 @@
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MsBuildThisFileDirectory)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
-  
   <ItemGroup>
     <ClCompile Include="precomp.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>precomp.hpp</PrecompiledHeaderFile>
     </ClCompile>
   </ItemGroup>
-
   <ItemGroup>
     <ClCompile Include="assertentry.cpp" />
     <ClCompile Include="dynarrayimpl.cpp" />
@@ -70,5 +64,39 @@
     <ClCompile Include="xmm.cpp" />
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
-  
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />  </Project>
+  <ItemGroup>
+    <ClInclude Include="Arithmetic.h" />
+    <ClInclude Include="AssertEntry.h" />
+    <ClInclude Include="basetypes.h" />
+    <ClInclude Include="DelegatingIUnknown.h" />
+    <ClInclude Include="DpiScale.h" />
+    <ClInclude Include="DpiUtil.h" />
+    <ClInclude Include="dynarray.h" />
+    <ClInclude Include="dynarrayimpl.h" />
+    <ClInclude Include="engine.h" />
+    <ClInclude Include="etwtrace.h" />
+    <ClInclude Include="GenericTableMap.h" />
+    <ClInclude Include="heap.h" />
+    <ClInclude Include="List.h" />
+    <ClInclude Include="mem.h" />
+    <ClInclude Include="milcom.h" />
+    <ClInclude Include="MILInterlocked.h" />
+    <ClInclude Include="MILRect.h" />
+    <ClInclude Include="MILRectF_WH.h" />
+    <ClInclude Include="pixelformatutils.h" />
+    <ClInclude Include="precomp.hpp" />
+    <ClInclude Include="processorfeatures.h" />
+    <ClInclude Include="real.h" />
+    <ClInclude Include="RefCountBase.h" />
+    <ClInclude Include="ResourceCache.h" />
+    <ClInclude Include="rgnutils.h" />
+    <ClInclude Include="scopeguard.h" />
+    <ClInclude Include="SehException.h" />
+    <ClInclude Include="shared.h" />
+    <ClInclude Include="utc.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="win32error.h" />
+    <ClInclude Include="Xmm.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

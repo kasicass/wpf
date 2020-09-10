@@ -18,23 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  
   <PropertyGroup>
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CLRSupport>false</CLRSupport>
   </PropertyGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <Import Project="$(WpfCppProps)" />
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />  
-
-<PropertyGroup Label="Globals">
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{a27af0f3-ca2a-42cf-a962-a3f3b0e83d35}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <TargetName>hw</TargetName>
   </PropertyGroup>
-  
   <ItemDefinitionGroup>
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -45,17 +41,14 @@
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(ResourceFileIncludePath)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemDefinitionGroup>
-  
   <ItemGroup>
     <ClCompile Include="precomp.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
-
   <ItemGroup>
     <ResourceCompile Include="hw.rc" />
   </ItemGroup>
-
   <ItemGroup>
     <ClCompile Include="BitmapOfDeviceBitmaps.cpp" />
     <ClCompile Include="d3ddevice.cpp" />
@@ -127,10 +120,90 @@
     <ClCompile Include="swfallback.cpp" />
     <ClCompile Include="Waffler.cpp" />
   </ItemGroup>
-
   <ItemGroup>
     <AdditionalLinkerInputs Include="$(IntermediateOutputPath)hw.res" />
   </ItemGroup>
-  
-  <Import Project="ShaderAssemblies.targets"/>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />  </Project>
+  <ItemGroup>
+    <ClInclude Include="BitmapOfDeviceBitmaps.h" />
+    <ClInclude Include="d3ddevice.h" />
+    <ClInclude Include="D3DDeviceManager.h" />
+    <ClInclude Include="d3dgeometry.h" />
+    <ClInclude Include="d3dglyphbank.h" />
+    <ClInclude Include="d3dglyphpainter.h" />
+    <ClInclude Include="d3dglyphrun.h" />
+    <ClInclude Include="d3dlockabletexture.h" />
+    <ClInclude Include="d3dlog.h" />
+    <ClInclude Include="d3dregistry.h" />
+    <ClInclude Include="d3drenderstate.h" />
+    <ClInclude Include="d3dresource.h" />
+    <ClInclude Include="d3dstats.h" />
+    <ClInclude Include="d3dsurface.h" />
+    <ClInclude Include="d3dswapchain.h" />
+    <ClInclude Include="d3dswapchainwithswdc.h" />
+    <ClInclude Include="d3dtexture.h" />
+    <ClInclude Include="D3DTextureSurface.h" />
+    <ClInclude Include="d3dvertex.h" />
+    <ClInclude Include="d3dvidmemonlytexture.h" />
+    <ClInclude Include="DelayComputedBounds.h" />
+    <ClInclude Include="gpumarker.h" />
+    <ClInclude Include="hw.h" />
+    <ClInclude Include="Hw3DGeometryStreamBuffer.h" />
+    <ClInclude Include="HwBitBltDeviceBitmapColorSource.h" />
+    <ClInclude Include="HwBitmapBrush.h" />
+    <ClInclude Include="HwBitmapCache.h" />
+    <ClInclude Include="HwBitmapColorSource.h" />
+    <ClInclude Include="HwBoxColorSource.h" />
+    <ClInclude Include="HwBrush.h" />
+    <ClInclude Include="HwBrushContext.h" />
+    <ClInclude Include="HwBrushPool.h" />
+    <ClInclude Include="HwCaps.h" />
+    <ClInclude Include="HwColorComponentColorSource.h" />
+    <ClInclude Include="HwColorSource.h" />
+    <ClInclude Include="HwConstantColorSource.h" />
+    <ClInclude Include="hwdestinationtexture.h" />
+    <ClInclude Include="hwdestinationtexturepool.h" />
+    <ClInclude Include="HwDeviceBitmapColorSource.h" />
+    <ClInclude Include="hwdisplayrt.h" />
+    <ClInclude Include="hwffshaders.h" />
+    <ClInclude Include="HwGraphicsCards.h" />
+    <ClInclude Include="HwHLSLShaderFragments.h" />
+    <ClInclude Include="hwhwndrt.h" />
+    <ClInclude Include="hwinit.h" />
+    <ClInclude Include="HwLightingColorSource.h" />
+    <ClInclude Include="HwLinearGradientBrush.h" />
+    <ClInclude Include="HwLinearGradientColorSource.h" />
+    <ClInclude Include="hwpipeline.h" />
+    <ClInclude Include="HwPipelineBuilder.h" />
+    <ClInclude Include="HwPrimaryColorSource.h" />
+    <ClInclude Include="HwRadialGradientBrush.h" />
+    <ClInclude Include="HwRadialGradientColorSource.h" />
+    <ClInclude Include="hwrasterizer.h" />
+    <ClInclude Include="HwRenderStateManager.h" />
+    <ClInclude Include="hwshader.h" />
+    <ClInclude Include="HwShaderBuilder.h" />
+    <ClInclude Include="HwShaderCache.h" />
+    <ClInclude Include="HwShaderEffect.h" />
+    <ClInclude Include="HwShaderFragmentToHLSLConverter.h" />
+    <ClInclude Include="HwShaderPipeline.h" />
+    <ClInclude Include="HwSolidBrush.h" />
+    <ClInclude Include="hwsolidcolortexturesource.h" />
+    <ClInclude Include="hwsolidcolortexturesourcepool.h" />
+    <ClInclude Include="HwStateTable.h" />
+    <ClInclude Include="hwsurfrt.h" />
+    <ClInclude Include="hwsurfrtdata.h" />
+    <ClInclude Include="hwsw3dfallback.h" />
+    <ClInclude Include="HwTexturedColorSource.h" />
+    <ClInclude Include="HwTexturedColorSourceBrush.h" />
+    <ClInclude Include="hwtexturert.h" />
+    <ClInclude Include="HwUtils.h" />
+    <ClInclude Include="HwVertexBuffer.h" />
+    <ClInclude Include="HwVidMemTextureManager.h" />
+    <ClInclude Include="InteropDeviceBitmap.h" />
+    <ClInclude Include="precomp.hpp" />
+    <ClInclude Include="Shaders.h" />
+    <ClInclude Include="swfallback.h" />
+    <ClInclude Include="Waffler.h" />
+  </ItemGroup>
+  <Import Project="ShaderAssemblies.targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
