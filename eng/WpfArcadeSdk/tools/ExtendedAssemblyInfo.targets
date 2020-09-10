@@ -4,7 +4,7 @@
     Microsoft.NET.DefaultAssemblyInfo.targets initializes $(Version) based on $(VersionPrefix) (which is defined in eng\Versions.props)
     Tish is part of the .NET Core SDK and primarily defined for C# today. We reuses this here for C++/CLI
   -->
-  <Import Sdk="Microsoft.Net.Sdk" Project="..\targets\Microsoft.NET.DefaultAssemblyInfo.targets" Condition="'$(MSBuildProjectExtension)'=='.vcxproj'"/>
+  <Import Sdk="Microsoft.Net.Sdk" Project="..\build\Microsoft.NET.DefaultAssemblyInfo.targets" Condition="'$(MSBuildProjectExtension)'=='.vcxproj'"/>
   
   <!-- 
     Defines [assembly: AssemblyMetadata()] attributes 
